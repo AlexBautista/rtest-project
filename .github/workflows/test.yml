@@ -21,10 +21,13 @@ jobs:
         
       - name: Install dependencies
         run: |
-          Rscript -e "install.packages('remotes')"
-          Rscript -e "install.packages('httr')"
+          Rscript -e "install.packages('remotes')"         
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
-        
+
+      - name: Install additional packages (e.g., httr)
+        run: |
+          Rscript -e "install.packages('httr')"  # Install httr explicitly  
+      
       - name: Install testthat
         run: Rscript -e "install.packages('testthat')"
       
