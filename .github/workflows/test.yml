@@ -1,4 +1,3 @@
-# .github/workflows/test.yml
 name: R Integration Testing
 
 on:
@@ -22,11 +21,11 @@ jobs:
         
       - name: Install dependencies
         run: |
-          install.packages("remotes")
-          remotes::install_deps(dependencies = TRUE)
+          Rscript -e "install.packages('remotes')"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
         
       - name: Install testthat
-        run: install.packages("testthat")
+        run: Rscript -e "install.packages('testthat')"
         
       - name: Run tests
         run: |
