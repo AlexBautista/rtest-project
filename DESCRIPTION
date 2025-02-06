@@ -1,0 +1,14 @@
+Package: myproject
+Type: Package
+Title: My R Project
+Version: 0.1.0
+Author: Your Name
+Maintainer: your.email@example.com
+Description: A sample project.
+License: MIT
+Imports:
+    shiny,
+    httr,
+    DBI,
+    RSQLite,
+    testthat
