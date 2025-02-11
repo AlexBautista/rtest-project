@@ -10,5 +10,6 @@ Imports:
     shiny,
     httr,
     DBI,
+    dplyr,
     RSQLite,
     testthat
