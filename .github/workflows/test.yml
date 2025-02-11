@@ -23,7 +23,12 @@ jobs:
         run: |
           Rscript -e "install.packages('remotes')"         
           Rscript -e "remotes::install_deps(dependencies = TRUE)"
-
+      # Install system dependencies for R packages (e.g., libcurl for APIs, libssl for security)
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+      
       - name: Install additional packages (e.g., httr)
         run: |
           Rscript -e "install.packages('httr')"  # Install httr explicitly  
