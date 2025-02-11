@@ -1,9 +1,9 @@
 # tests/testthat/test_api_db.R
-library(testthat)
-library(httr)
-library(DBI)
-library(RSQLite)
-library(dplyr)
+library("testthat")
+library("httr")
+library("DBI")
+library("RSQLite")
+library("dplyr")
 
 source("R/db_helper.R")
 
