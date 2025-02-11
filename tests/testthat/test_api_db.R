@@ -5,7 +5,7 @@ library("DBI")
 library("RSQLite")
 library("dplyr")
 
-source("./R/db_helper.R")
+#source("R/db_helper.R")
 
 test_that("API call and database insertion work correctly", {
   
